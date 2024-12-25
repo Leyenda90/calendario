@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #e0f7fa; /* Color de fondo de la página */
+}
+h1 {
+    text-align: center;
+}
+.calendar {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.month {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    width: calc(30% - 20px); /* Ancho para que se alineen tres meses en una fila */
+    box-sizing: border-box;
+}
+.month-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+}
+.day {
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.day.checked {
+    background: #c8e6c9;
+}
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+.message, .reminder {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .month {
+        width: calc(100% - 20px); /* Un mes por fila en pantallas pequeñas */
+    }
+}
+
+/* Colores de fondo para cada mes */
+.month:nth-child(3n+1) { background-color: #ffe0b2; } /* Noviembre */
+.month:nth-child(3n+2) { background-color: #bbdefb; } /* Diciembre */
+.month:nth-child(3n+3) { background-color: #d1c4e9; } /* Enero */
+.month:nth-child(3n+4) { background-color: #c8e6c9; } /* Febrero */
+.month:nth-child(3n+5) { background-color: #fff9c4; } /* Marzo */
+.month:nth-child(3n+6) { background-color: #f8bbd0; } /* Abril */
+.month:nth-child(3n+7) { background-color: #e1bee7; } /* Mayo */
+.month:nth-child(3n+8) { background-color: #b2ebf2; } /* Junio */
+.month:nth-child(3n+9) { background-color: #ffe0b2; } /* Julio */
+.month:nth-child(3n+10) { background-color: #bbdefb; } /* Agosto */
+.month:nth-child(3n+11) { background-color: #d1c4e9; } /* Septiembre */
+.month:nth-child(3n+12) { background-color: #c8e6c9; } /* Octubre */
